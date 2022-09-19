@@ -1,47 +1,39 @@
-body, html {
-  height: 100%;
+ #root{
+  height: 100vh;
+  border: 1px solid black;
+  color: white;
+  
+}
+
+.output {
   display: flex;
+  font-size: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+  text-align: center;
   justify-content: center;
   align-items: center;
+  height: 17%;
+  border: 2px solid black;
+}
+.grid-container {
+  display: grid;
+  height: 80%;
+  grid-template-columns: repeat(4, 25%);
+  grid-auto-rows: repeat(5,20%);
+  padding: 5px;
+  grid-gap: 0.1rem;
 
 }
-#root {
-  background-color: rgba(25, 15, 15, 0.93);
-  height: 59vh;
-  width: 60vh;
-}
 
-#outputfield {
-  display: flex;
-  font-size: 4rem;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 0.5rem;
-  align-items: flex-end;
-  justify-content: flex-start;
-  height: 5rem;
-  border-style: ridge;
-  background-color: rgb(63, 50, 50);
+.grid-item{
+  background-color: black;
   color: white;
 }
-#buttons {
-  padding: 0.3rem;
-}
-button {
-  height: 5.5rem;
-  width: 14.4vh;
-  margin: 0.1rem;
-  font-family: 'Courier New', Courier, monospace;
 
-  font-size: 2rem;
-
-  background-color: rgb(101, 95, 95);
-  border-radius: 10px;
+.equals {
+  grid-row-start: 2;
+  grid-row-end: 5;
+  grid-column-start: 4;
 }
 
-#equalsButton {
-  display: flex;
-  justify-content: flex-end;
-}
-#equals {
-  height: 15rem;
-}
