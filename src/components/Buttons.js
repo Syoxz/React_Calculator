@@ -7,6 +7,22 @@ export default function Buttons() {
         const buttons = document.querySelectorAll(".btn").forEach(btn => btn.addEventListener('click', () => {
             document.querySelector(".output").innerText += btn.innerText;
         }))
+        document.addEventListener('keydown', (event) => {
+            console.log (event.key);
+            const operators =  ['+', '-', '*', '/'];
+            if (event.key <= 9 || operators.includes(event.key)){
+                document.querySelector(".output").innerText += event.key;
+            }
+            else if (event.key === 'Enter' || event.key === "="){
+                calculate();
+            }
+            else if (event.key === 'Escape'){
+                reset();
+            }
+            else if (event.key === 'Backspace'){
+                deleteLast();
+            }
+        })
     });
 
 
