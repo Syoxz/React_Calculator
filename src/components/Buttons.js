@@ -9,12 +9,6 @@ export default function Buttons() {
         }))
     });
 
-    function calculate () {
-        const output = document.querySelector(".output").innerText;
-        const result = eval (output);
-        document.querySelector(".output").innerText = result;
-        
-    }
 
 
     return (
@@ -31,7 +25,7 @@ export default function Buttons() {
 
 
                 <button type="button" onClick = {calculate} className="grid-item equals ">=</button>
-                <button type="button" className="grid-item">DEL</button>
+                <button type="button" onClick= {deleteLast} className="grid-item">DEL</button>
 
 
                 <button type="button" className="btn grid-item">4</button>
@@ -44,7 +38,7 @@ export default function Buttons() {
 
                 <button type="button" className="btn grid-item">0</button>
                 <button type="button" className="btn grid-item">.</button>
-                <button type="button" className="grid-item">C</button>
+                <button type="button" onClick = {reset} className="grid-item">C</button>
 
 
             </div>
@@ -55,4 +49,17 @@ export default function Buttons() {
 
 }
 
+function calculate () {
+    const output = document.querySelector(".output").innerText;
+    const result = eval (output);
+    document.querySelector(".output").innerText = result;
+    
+}
 
+function reset() {
+    document.querySelector(".output").innerText = "";
+}
+
+function deleteLast () {
+    document.querySelector(".output").innerText =  document.querySelector(".output").innerText.slice(0, -1)
+ }
