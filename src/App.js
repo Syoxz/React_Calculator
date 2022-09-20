@@ -1,5 +1,6 @@
-import Buttons from "./Buttons";
-import OutputField from "./OutputField";
+import Buttons from "./components/Buttons";
+import OutputField from "./components/OutputField";
+
 
 
 function App() {
