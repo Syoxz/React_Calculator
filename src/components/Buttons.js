@@ -4,12 +4,12 @@ import React, { useEffect } from 'react'
 export default function Buttons() {
 
     useEffect(() => {
-        const operators = ['+', '-', '*', '/'];
+        const symbols = ['+', '-', '*', '/', '.'];
         const buttons = document.querySelectorAll(".btn").forEach(btn => btn.addEventListener('click', () => {
             document.querySelector(".output").innerText += btn.innerText;
         }))
         document.addEventListener('keydown', (event) => {
-            if (event.key <= 9 || operators.includes(event.key)) {
+            if (event.key <= 9 || symbols.includes(event.key)) {
                 document.querySelector(".output").innerText += event.key;
             }
             else if (event.key === 'Enter' || event.key === "=") {
@@ -28,7 +28,7 @@ export default function Buttons() {
 
     return (
         <>
-            <div class="grid-container">
+            <div className="grid-container">
                 <button type="button" className="btn grid-item">+</button>
                 <button type="button" className="btn grid-item">-</button>
                 <button type="button" className="btn grid-item">*</button>
