@@ -66,7 +66,7 @@ export default function Buttons() {
 
 function calculate() {
     const output = document.querySelector(".output").innerText;
-    const result = math.eval(output);
+    const result = eval(output);
     document.querySelector(".output").innerText = result;
 
 }
