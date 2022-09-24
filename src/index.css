@@ -1,58 +1,59 @@
- #root{
-  height: 100vh;
-  padding: 0.2rem;
-  color: white;
-  background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%);
-  
-}
+ #root {
+   height: 100vh;
+   padding: 0.2rem;
+   color: white;
+   background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%);
 
-.output {
-  display: flex;
-  overflow: auto;
-  font-size: 4rem;
-  border: 0.1rem solid rgb(152, 132, 132);
-  border-radius: 3rem;
-  color: black;
-  font-family: 'Courier New', Courier, monospace;
-  background: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%);
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  height: 17%;
-}
-.grid-container {
-  display: grid;
-  height: 80%;
-  grid-template-columns: repeat(4, 25%);
-  grid-template-rows: repeat(5,20%);
+ }
 
-}
-         
+ .output {
+   display: flex;
+   overflow: auto;
+   font-size: 4rem;
+   border: 0.1rem solid rgb(152, 132, 132);
+   border-radius: 3rem;
+   color: black;
+   font-family: 'Courier New', Courier, monospace;
+   background: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%);
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   height: 17%;
+ }
 
-.grid-item{
-  background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%);
-  margin: 0.7rem;
-  padding: 0.5rem 0.5rem;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;            
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
+ .grid-container {
+   display: grid;
+   height: 80%;
+   grid-template-columns: repeat(4, 25%);
+   grid-template-rows: repeat(5, 20%);
 
-.grid-item:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
+ }
 
-}
 
-.equals {
-  grid-row-start: 3;
-  grid-row-end: 6;
-  grid-column-start: 4;
-}
+ .grid-item {
+   background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%);
+   margin: 0.7rem;
+   padding: 0.5rem 0.5rem;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
 
+ .grid-item:hover {
+   background-position: right center;
+   /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+
+ }
+
+ .equals {
+   grid-row-start: 3;
+   grid-row-end: 6;
+   grid-column-start: 4;
+ }

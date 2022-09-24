@@ -5,7 +5,7 @@ export default function Buttons() {
 
     useEffect(() => {
         const symbols = ['+', '-', '*', '/', '.'];
-        const buttons = document.querySelectorAll(".btn").forEach(btn => btn.addEventListener('click', () => {
+        document.querySelectorAll(".btn").forEach(btn => btn.addEventListener('click', () => {
             document.querySelector(".output").innerText += btn.innerText;
         }))
         document.addEventListener('keydown', (event) => {
@@ -66,7 +66,7 @@ export default function Buttons() {
 
 function calculate() {
     const output = document.querySelector(".output").innerText;
-    const result = eval(output);
+    const result = math.eval(output);
     document.querySelector(".output").innerText = result;
 
 }
