@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 export default function Buttons() {
 
     useEffect(() => {
-        const symbols = ['+', '-', '*', '/', '.'];
+        const symbols = ['+', '-', '*', '/', '.', '(', ')'];
         document.querySelectorAll(".btn").forEach(btn => btn.addEventListener('click', () => {
             document.querySelector(".output").innerText += btn.innerText;
         }))
@@ -29,9 +29,9 @@ export default function Buttons() {
     return (
         <>
             <div className="grid-container">
-                <button type="button" className="btn grid-item">+</button>
-                <button type="button" className="btn grid-item">-</button>
-                <button type="button" className="btn grid-item">*</button>
+                <button type="button" onClick={reset} className="btn grid-item">C</button>
+                <button type="button" className="btn grid-item">(</button>
+                <button type="button" className="btn grid-item">)</button>
                 <button type="button" className="btn grid-item">/</button>
 
                 <button type="button" className="btn grid-item">7</button>
@@ -39,21 +39,24 @@ export default function Buttons() {
                 <button type="button" className="btn grid-item">9</button>
 
 
-                <button type="button" onClick={calculate} className="grid-item equals ">=</button>
-                <button type="button" onClick={deleteLast} className="grid-item">DEL</button>
-
-
+                <button type="button" className="btn grid-item equals ">*</button>
                 <button type="button" className="btn grid-item">4</button>
+
+
                 <button type="button" className="btn grid-item">5</button>
                 <button type="button" className="btn grid-item">6</button>
+                <button type="button" className="btn grid-item">+</button>
 
                 <button type="button" className="btn grid-item">1</button>
                 <button type="button" className="btn grid-item">2</button>
                 <button type="button" className="btn grid-item">3</button>
 
+                <button type="button" className="btn grid-item">-</button>
                 <button type="button" className="btn grid-item">0</button>
+
                 <button type="button" className="btn grid-item">.</button>
-                <button type="button" onClick={reset} className="grid-item">C</button>
+                <button type="button" onClick={deleteLast} className="grid-item">DEL</button>
+                <button type="button" onClick={calculate} className="grid-item equals ">=</button>
 
 
             </div>
